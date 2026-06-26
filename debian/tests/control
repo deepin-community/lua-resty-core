@@ -1,0 +1,7 @@
+Tests:
+ nginxtest,
+Restrictions:
+ allow-stderr isolation-container needs-root skippable,
+Depends:
+ curl,
+ nginx-extras,

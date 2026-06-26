@@ -1,5 +1,163 @@
-template-repository (1.0-1) unstable; urgency=medium
+lua-resty-core (0.1.31-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 0.1.31
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.28~
+    and << 1:0.10.28.1~
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jan Mojžíš <janmojzis@debian.org>  Mon, 10 Feb 2025 19:56:03 +0100
+
+lua-resty-core (0.1.30-2) unstable; urgency=medium
+
+  * d/{control,copyright}: update my email to "janmojzis@debian.org"
+  * d/copyright: bump debian/* copyright year
+  * d/control: Maintainer Lua Team, me as uploader
+  * d/salsa-ci.yml: add
+  * d/watch: use more generic template
+
+ -- Jan Mojžíš <janmojzis@debian.org>  Mon, 27 Jan 2025 21:12:33 +0100
+
+lua-resty-core (0.1.30-1) unstable; urgency=medium
+
+  * New upstream version 0.1.30
+  * d/control: remove XB-Lua-Versions header
+  * d/gbp.conf: dist = DEP14, debian-branch = debian/latest
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 23 Oct 2024 17:38:33 +0200
+
+lua-resty-core (0.1.29-1) unstable; urgency=medium
+
+  * New upstream version 0.1.29
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.27~
+    and << 1:0.10.27.1~
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 19 Aug 2024 10:04:28 +0200
+
+lua-resty-core (0.1.28-3) unstable; urgency=medium
+
+  * d/control: bump Standards-Version: 4.7.0, no changes
+  * d/control: replace luajit2 B-D with luajit (Closes: 1072348)
+  * d/control: update dependency lua-resty-lrucache (>= 0.13-11)
+  * d/control: update dependency libnginx-mod-http-lua (>= 1:0.10.26-3)
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 01 Jun 2024 16:23:59 +0200
+
+lua-resty-core (0.1.28-2) unstable; urgency=medium
+
+  * d/watch: use new recommended github template
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 19 Jan 2024 19:18:04 +0100
+
+lua-resty-core (0.1.28-1) unstable; urgency=medium
+
+  * New upstream version 0.1.28
+  * d/copyright: bump my copyright year
+  * d/gbp.conf: add [pull] track-missing = True
+  * d/watch: remove filenamemangle
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.26~
+    and << 1:0.10.26.1~
+  * d/p/0001-feature-support-pcre2.patch: remove, fixed in upstream
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 08 Jan 2024 09:16:34 +0100
+
+lua-resty-core (0.1.27-2) unstable; urgency=medium
+
+  * d/p/0001-feature-support-pcre2.patch: added PCRE2 support
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 27 Sep 2023 19:57:29 +0200
+
+lua-resty-core (0.1.27-1) unstable; urgency=medium
+
+  * New upstream version 0.1.27
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.25
+    and << 1:0.10.25.1~
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 28 Jun 2023 18:22:09 +0200
+
+lua-resty-core (0.1.25-1) unstable; urgency=medium
+
+  * New upstream version 0.1.25
+  * d/copyright-scan-patterns.yml added
+  * d/copyright updated to be compatible with 'cme update dpkg-copyright'
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.23
+    and << 1:0.10.23.1~
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 24 Feb 2023 07:30:11 +0100
+
+lua-resty-core (0.1.25~rc1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * d/control: updated libnginx-mod-http-lua dependency >=1:0.10.23~rc1
+    and << 1:0.10.23.1~
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 07 Feb 2023 09:46:58 +0100
+
+lua-resty-core (0.1.25~rc1-1) experimental; urgency=medium
+
+  * New upstream version 0.1.25~rc1
+  * d/control: update libnginx-mod-http-lua dependency 1:0.10.23~rc1
+  * d/control: bump Standards-Version: 4.6.2, no changes
+  * d/gbb.conf: switched to debian branch main (debian-branch = main)
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 21 Jan 2023 22:45:16 +0100
+
+lua-resty-core (0.1.24-4) unstable; urgency=medium
+
+  *  d/t/control fixed test dependencies
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 25 Nov 2022 18:07:14 +0100
+
+lua-resty-core (0.1.24-3) unstable; urgency=medium
+
+  * d/t/nginxtest cleanup, after the luajit2 library, which lua-resty-core
+    depends on, has been removed on ppc64el architecture (segfaults).
+  * d/upstream/metadata added, set upstream metadata fields: Bug-Database,
+    Bug-Submit, Repository-Browse.
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 23 Sep 2022 17:46:22 +0200
+
+lua-resty-core (0.1.24-2) unstable; urgency=medium
+
+  * d/control added dependency on libnginx-mod-http-lua
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 18 Sep 2022 08:34:10 +0200
+
+lua-resty-core (0.1.24-1) unstable; urgency=medium
+
+  * New upstream version 0.1.24.
+  * d/t/nginxtest updated, the test is skipped if libnginx-mod-http-lua module
+    or lua-resty-core can't be installed
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 17 Sep 2022 07:49:08 +0200
+
+lua-resty-core (0.1.23-5) unstable; urgency=medium
+
+  * d/lua5.{2,3,4}.dh-lua.conf removed, lua-resty-core depends on LuaJIT2.
+    LuaJIT2 is API+ABI-compatible with Lua 5.1
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 04 Sep 2022 18:45:18 +0200
+
+lua-resty-core (0.1.23-4) unstable; urgency=medium
+
+  * d/t/control fixed test dependencies
+  * d/t/nginxtest updated, added check if lua http module is installed,
+    and if it is not, then the test is skipped.
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 19 Aug 2022 08:26:36 +0200
+
+lua-resty-core (0.1.23-3) unstable; urgency=medium
+
+  * d/t/nginxtest: added autopkgtest
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 13 Aug 2022 17:56:04 +0200
+
+lua-resty-core (0.1.23-2) unstable; urgency=medium
+
+  * d/control added dependency on libluajit2-5.1-2
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 02 Aug 2022 15:11:03 +0200
+
+lua-resty-core (0.1.23-1) unstable; urgency=medium
+
+  * Initial release. (Closes: 1016053)
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 29 Jul 2022 17:39:42 +0200
