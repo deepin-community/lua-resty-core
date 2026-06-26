@@ -1,15 +1,34 @@
-Source: template-repository
-Section: unknown
+Source: lua-resty-core
+Section: net
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-lua,
+Maintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>
+Uploaders:
+ Jan Mojžíš <janmojzis@debian.org>,
+Homepage: https://github.com/openresty/lua-resty-core
+Standards-Version: 4.7.2
+Vcs-Git: https://salsa.debian.org/lua-team/lua-resty-core.git
+Vcs-Browser: https://salsa.debian.org/lua-team/lua-resty-core
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: lua-resty-core
+Depends:
+ libluajit-5.1-2,
+ libnginx-mod-http-lua (<< 1:0.10.29.1~),
+ libnginx-mod-http-lua (>= 1:0.10.29),
+ lua-resty-lrucache (>= 0.13-11),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ ${lua:Provides},
+Architecture: all
+Description: New FFI-based Lua API for NGINX Lua module
+ This pure Lua library reimplements part of the ngx_lua module's Nginx API
+ for Lua with LuaJIT FFI and installs the new FFI-based Lua API
+ into the ngx.* and ndk.* namespaces used by the ngx_lua module. In addition,
+ this Lua library implements any significant new Lua APIs of the ngx_lua module
+ as proper Lua modules, like ngx.semaphore and ngx.balancer. The FFI-based
+ Lua API can work with LuaJIT's JIT compiler. ngx_lua's default API is based on
+ the standard Lua C API, which will never be JIT compiled and the user Lua code
+ is always interpreted (slowly).

@@ -1,0 +1,8 @@
+Tests:
+ nginxtest,
+Restrictions:
+ allow-stderr isolation-container needs-root skip-not-installable,
+Depends:
+ curl,
+ libnginx-mod-http-lua,
+ nginx,
